@@ -1,1 +1,18 @@
-{{model.title}}
+<!-- A blog post -->
+<section class="post">
+    <header class="post-header">
+        <img width="250" class="post-avatar" src="{{model.imgurl}}">
+
+        <h2 class="post-title">{{model.title}}</h2>
+
+        <p class="post-meta">
+            By <a href="#" class="post-author">{{model.author}}</a>
+        </p>
+    </header>
+
+    <div class="post-text">
+        <p>{{model.text}}</p>
+        <p>{{model.timestamp}}</p>
+    </div>
+
+</section>
