@@ -2,21 +2,38 @@
   {{post-tile post=post}}
 {{/each}}
 <!-- A form example -->
-<div class="col-lg-6">
+<div class="col-lg-8">
   <div class="well bs-component">
-    <form class="form-horizontal">
+    <form class="form-horizontal" {{action 'createPost' on="submit"}}>
       <fieldset>
-        <legend>Legend</legend>
+        <legend>New blog post</legend>
         <div class="form-group">
-          <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+          <label for="author" class="col-lg-2 control-label">Author</label>
+          <div class="col-lg-5">
+            {{input type="text" class="form-control" valueBinding=author}}
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputTitle" class="col-lg-2 control-label">Title</label>
+          <div class="col-lg-5">
+            {{input type="text" class="form-control" id="inputTitle" value=inputTitle placeholder="title"}}
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputText" class="col-lg-2 control-label">Text</label>
           <div class="col-lg-10">
-            <input type="text" class="form-control" id="post" placeholder="your post">
+            {{textarea rows="3" class="form-control" id="inputText" value=inputText placeholder="your post"}}
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputImageUrl" class="col-lg-2 control-label">Image link</label>
+          <div class="col-lg-10">
+            {{input value=inputImageUrl class="form-control" id="inputImageUrl" placeholder="your image"}}
           </div>
         </div>
         <div class="form-group">
           <div class="col-lg-10 col-lg-offset-2">
-            <button type="reset" class="btn btn-default">Cancel</button>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button class="btn btn-primary">Submit</button>
           </div>
         </div>
       </fieldset>

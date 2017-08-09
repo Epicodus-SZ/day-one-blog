@@ -76,3 +76,4 @@ Specify what it takes to deploy your app.
 23. Create a simple post.hbs file.
 24. Change the post route to be dynamic (ie `this.route('post', {path: '/post/:post_id'});`)
 25. refactor links to the specific post pages using this `{{#link-to 'post' post.id}}`
+26.
