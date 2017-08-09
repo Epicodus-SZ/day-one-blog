@@ -53,3 +53,10 @@ Specify what it takes to deploy your app.
 
 1. `ember new day-one-blog` - creates the project
 2. `npm install` - loads dependencies in package.json
+3. Create a new Github repository.
+4. `git init` and link github repository to the new project folder
+5. `ember g route about` - creates about route.
+6. `ember g route contact` - creates contact route.
+7. `ember g route index` - creates index route.
+8. `ember install ember-bootstrap` - adds Bootstrap to our project
+9. Copied a bootstrap theme from bootswatch.com and updated application.hbs
