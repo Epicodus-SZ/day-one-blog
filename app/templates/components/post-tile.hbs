@@ -1,0 +1,16 @@
+    <!-- A blog post -->
+    <section class="post">
+        <header class="post-header">
+            <img width="48" height="48" alt="Tilo Mitra&#x27;s avatar" class="post-avatar" src="{{post.imgurl}}">
+
+            <h2 class="post-title">{{post.title}}</h2>
+
+            <p class="post-meta">
+                By <a href="#" class="post-author">{{post.author}}</a>
+            </p>
+        </header>
+
+        <div class="post-text">
+            <p>{{trim-string post.text}}...{{#link-to 'post' post.id}}link{{/link-to}}</p>
+        </div>
+    </section>

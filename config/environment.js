@@ -16,6 +16,20 @@ module.exports = function(environment) {
         Date: false
       }
     },
+    firebase: {
+      apiKey: "AIzaSyCIAPt1FfiqZvCmw2cs2EJqRJwDBpzhHb0",
+      authDomain: "day-one-blog.firebaseapp.com",
+      databaseURL: "https://day-one-blog.firebaseio.com",
+      projectId: "day-one-blog",
+      storageBucket: "day-one-blog.appspot.com",
+      messagingSenderId: "241796525028"
+    },
+      // if using ember-cli-content-security-policy
+    contentSecurityPolicy: {
+      'script-src': "'self' 'unsafe-eval' apis.google.com",
+      'frame-src': "'self' https://*.firebaseapp.com",
+      'connect-src': "'self' wss://*.firebaseio.com https://*.googleapis.com"
+    },
 
     APP: {
       // Here you can pass flags/options to your application instance

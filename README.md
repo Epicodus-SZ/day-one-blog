@@ -60,3 +60,19 @@ Specify what it takes to deploy your app.
 7. `ember g route index` - creates index route.
 8. `ember install ember-bootstrap` - adds Bootstrap to our project
 9. Copied a bootstrap theme from bootswatch.com and updated application.hbs
+10. Created posts.json to create default data for database.
+11. `ember g model post` - creates post model.
+12. `ember g model comment` - creates comment model.
+13. Add attributes to both models in app/models folder.
+14. Create a new Firebase project.
+15. Set database rules, read/write access to true and Publish the results to save.
+16. Install the emberfire package using `ember install emberfire`
+17. Copy your apikey information from firebase into config/environment.js
+18. Import your posts.json file into the firebase DB.
+19. `ember g route post` - this creates the post route
+20. `ember g component post-tile` - creates a component for listing all posts on the website front page.
+21. Update the index.js file to add model data into the page.
+22. Create a post text helper using `ember g helper trim-string`
+23. Create a simple post.hbs file.
+24. Change the post route to be dynamic (ie `this.route('post', {path: '/post/:post_id'});`)
+25. refactor links to the specific post pages using this `{{#link-to 'post' post.id}}`
