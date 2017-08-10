@@ -6,13 +6,21 @@
         <h2 class="post-title">{{model.title}}</h2>
 
         <p class="post-meta">
-            By <a href="#" class="post-author">{{model.author}}</a>
+            By {{model.author}}, posted on {{model.timestamp}}
         </p>
     </header>
 
     <div class="post-text">
         <p>{{model.text}}</p>
-        <p>{{model.timestamp}}</p>
     </div>
+
+    <h4>Comments:</h4>
+    {{#each model.comments as |comment|}}
+      {{comment-tile comment=comment}}
+    {{/each}}
+    <br>
+    {{new-comment createComment="createComment" post=model}}
+
+    <button {{action 'delete' model}}>Delete</button>
 
 </section>
