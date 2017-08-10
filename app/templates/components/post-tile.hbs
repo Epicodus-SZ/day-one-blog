@@ -3,10 +3,10 @@
         <header class="post-header">
             <img width="48" height="48" class="post-avatar" src="{{post.imgurl}}">
 
-            <h2 class="post-title">{{post.title}}</h2>
+            <h2 class="post-title">{{#link-to 'post' post.id}}{{post.title}}{{/link-to}}</h2>
 
             <p class="post-meta">
-                By <a href="#" class="post-author">{{post.author}}</a>
+                By {{post.author}} (posted on {{post.timestamp}})
             </p>
         </header>
 
