@@ -21,6 +21,8 @@
     <br>
     {{new-comment createComment="createComment" post=model}}
 
-    <button {{action 'delete' model}}>Delete</button>
+    {{post-admin deletePost="delete" post=model}}
+
+
 
 </section>

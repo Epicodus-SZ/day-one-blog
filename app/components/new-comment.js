@@ -3,7 +3,6 @@ import Ember from 'ember';
 export default Ember.Component.extend({
   actions: {
     createComment() {
-      debugger;
       var date = new Date();
       var dMonth = date.getMonth()+1;
       var dateString = dMonth+'/'+date.getDate()+'/'+date.getFullYear();
