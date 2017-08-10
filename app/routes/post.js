@@ -15,7 +15,6 @@ export default Ember.Route.extend({
       this.transitionTo('post');
     }, //end of createComment action
     delete(post) {
-      debugger;
       if (confirm('Are you sure you want to delete this post?')) {
         //this.sendAction('destroyRental', rental);
         var comment_deletions = post.get('comments').map(function(comment) {
@@ -26,6 +25,9 @@ export default Ember.Route.extend({
         });
         this.transitionTo('index');
       } //end of if
-    } //end of delete
+    }, //end of delete
+    gotoUpdate(post){
+      this.transitionTo('update-post');
+    }
   } //end of actions
 });

@@ -3,7 +3,8 @@ import Ember from 'ember';
 export default Ember.Route.extend({
   model() {
     return Ember.RSVP.hash({
-      posts: this.store.findAll('post'),
+      posts: this.store.findAll('post').then(function(results) {
+        return results.sortBy('timestamp'); }),
       comments: this.store.findAll('comment')
     });
   },
@@ -22,7 +23,7 @@ export default Ember.Route.extend({
       };
       var newPost = this.store.createRecord('post', params);
       newPost.save();
-      this.transitionTo('index');
+      this.transitionTo('index', {reload: true});
     }
   }
 });
